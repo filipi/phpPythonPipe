@@ -1,4 +1,4 @@
-<img width="300" align="left" style="float: left; margin: 0 10px 0 0;" alt="screenshot" src="https://github.com/filipi/phpPythonPipe/blob/master/images/little-prince-boa.jpg">                                
+<img width="300" align="right" style="float: left; margin: 0 10px 0 0;" alt="screenshot" src="https://github.com/filipi/phpPythonPipe/blob/master/images/little-prince-boa.jpg">                                
 
 # phpPythonPipe
 
