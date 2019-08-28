@@ -7,15 +7,28 @@
   // Viewing all defined variables
   // https://stackoverflow.com/questions/633127/viewing-all-defined-variables
 
-  $path_to_python = "/home/filipi/anaconda3/bin/python";
+$path_to_python = "/home/filipi/anaconda3/bin/python";
 
-  $program = " -c 'import sys\nfor r in range(10):\n\tprint(\"\$result[]=\\\"rob\\\";\")'";
-  $command = $path_to_python . " " . $program;
-  //echo $command;
-  //$command = $path_to_python . " --help";
-  $python_output =  `$command`;
-  echo $python_output;
-  eval($python_output);
+$pythonCode  = "import sys\n";
+$pythonCode .= "print(\"Hello\")\n";
 
-  var_dump($result);
+//$program = "'import sys\nfor r in range(10):\n\tprint(\"\$result[]=\\\"rob\\\";\")'";
+//$program = "'import sys\nfor r in range(10):\n\tprint(\"\$result[]=\\\"rob\\\";\")'";
+$command = $path_to_python . " -c '" . $pythonCode . "'";
+
+$python_output =  `$command`;
+echo $python_output;
+
+//eval($python_output);
+//var_dump($result);
+
+echo "==============================\n";
+
+require_once("class.phpPythonPipe.php");
+$python = new phpPythonPipe();
+$python->kernelPath = $path_to_python;
+$python->code = $pythonCode;
+$python->exec();
+$python->print();
+
 ?>
