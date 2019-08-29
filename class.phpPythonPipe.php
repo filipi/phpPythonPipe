@@ -21,8 +21,9 @@
 class phpPythonPipe{
   public $kernelPath = '/usr/bin/python';
   public $code = '';
-  public $output = '';
-
+  public $output = '';  
+  public $showSTDERR = false;
+  
   public $debugLevel = 0;
 
   private $blackListCommands = array();  
@@ -83,7 +84,7 @@ class phpPythonPipe{
            (think to create a black list of modules...)
     */      
     //$command = "export PYTHONDUMPREFS=1 & " . $this->kernelPath . " -s -c '" . $this->code . "'";
-    $command = $this->kernelPath . " -c '" . $this->code . "'";
+    $command = $this->kernelPath . " -c '" . $this->code . "'  " . ($this->showSTDERR ? " 2>&1 " : "");
     $this->output = `$command`;
   }
 
