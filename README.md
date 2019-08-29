@@ -2,7 +2,9 @@
 
 # phpPythonPipe
 
-Usage:
+A simple way to execute python code from PHP without using temp files
+
+##Usage:
 
 ```
 <?php
