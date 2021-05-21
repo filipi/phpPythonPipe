@@ -2,7 +2,9 @@
 
 # phpPythonPipe
 
-A simple way to execute python code from PHP without using temp files
+A simple way to execute python code from PHP without using temp files.
+
+phpPythonPipe uses unix pipes to redirect the Python output to a PHP script.
 
 ## Usage:
 
