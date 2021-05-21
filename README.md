@@ -6,6 +6,8 @@ A simple way to execute python code from PHP without using temp files.
 
 phpPythonPipe uses unix pipes to redirect the Python output to a PHP script.
 
+An easy way to integrate Python scripts into PHP.
+
 ## Usage:
 
 ```
